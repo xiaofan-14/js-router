@@ -21,19 +21,19 @@ export function pathToRegexp(path, options = {}) {
         .replace(/\\\*/g, '.*') // 处理通配符 *
     
     // 处理参数 :param
-    pattern = pattern.replace(/\\?:([^(/\\]+)/g, (match, key) => {
+    pattern = pattern.replace(/\\?:([^(/\\]+)/g, (_, key) => {
         keys.push({ name: key, optional: false })
         return '([^/]+)' // 匹配除 / 外的任意字符
     })
     
     // 处理可选参数 :param?
-    pattern = pattern.replace(/\\?:([^(/\\]+)\\\?/g, (match, key) => {
+    pattern = pattern.replace(/\\?:([^(/\\]+)\\\?/g, (_, key) => {
         keys.push({ name: key, optional: true })
         return '([^/]*?)' // 可选匹配
     })
     
     // 处理通配符参数 *param
-    pattern = pattern.replace(/\\\*([^(/\\]*)/g, (match, key) => {
+    pattern = pattern.replace(/\\\*([^(/\\]*)/g, (_, key) => {
         if (key) {
             keys.push({ name: key, optional: false, wildcard: true })
         }
