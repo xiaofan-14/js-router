@@ -1,0 +1,70 @@
+<div class="me-page">
+    <h1>🙋‍♂️ 我的页面</h1>
+    <p>这是从外部HTML文件加载的内容！</p>
+
+    <div class="features">
+        <h3>功能特性</h3>
+        <ul>
+            <li>✅ 外部HTML文件加载</li>
+            <li>✅ 模板参数插值</li>
+            <li>✅ 动态脚本执行</li>
+            <li>✅ CSS样式支持</li>
+        </ul>
+    </div>
+
+    <div class="actions">
+        <button onclick="showAlert()">测试JavaScript</button>
+        <button onclick="router.push('/')">返回首页</button>
+    </div>
+</div>
+
+<style>
+    .me-page {
+        padding: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 10px;
+        margin: 20px 0;
+    }
+
+    .user-info, .features, .actions {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+    }
+
+    .me-page button {
+        background: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .me-page button:hover {
+        background: #45a049;
+    }
+
+    .me-page ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .me-page li {
+        padding: 5px 0;
+    }
+</style>
+
+<script>
+    function showAlert() {
+        alert('🎉 外部HTML文件中的JavaScript正常工作！\n\n当前时间: ' + new Date().toLocaleString())
+    }
+
+    console.log('📄 me.html 文件中的脚本已执行')
+    console.log('当前路由参数:', window.router?.currentRoute?.params)
+</script>

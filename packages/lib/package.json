@@ -1,0 +1,36 @@
+{
+  "name": "@js-router/lib",
+  "version": "1.0.0",
+  "description": "Modern JavaScript SPA Router inspired by Vue Router",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "7.0"
+  },
+  "keywords": [
+    "router",
+    "spa",
+    "javascript",
+    "web-components",
+    "vue-router"
+  ],
+  "author": "",
+  "license": "MIT",
+  "private": true
+}

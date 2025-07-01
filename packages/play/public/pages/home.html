@@ -1,0 +1,51 @@
+<div class="home-page">
+    <h1>Welcome to JS Router Demo</h1>
+    <p>This is a demonstration of the modern JavaScript SPA router with Vue Router-style features.</p>
+    
+    <div class="features">
+        <h2>Features</h2>
+        <ul>
+            <li>✅ Dynamic route parameters (e.g., /user/:id)</li>
+            <li>✅ Web Components (route-view, route-link)</li>
+            <li>✅ Programmatic navigation</li>
+            <li>✅ Route guards and meta information</li>
+            <li>✅ Query parameters support</li>
+            <li>✅ Active link styling</li>
+            <li>✅ Template loading from HTML files</li>
+            <li>✅ Component-based routing</li>
+        </ul>
+    </div>
+    
+    <div class="quick-links">
+        <h2>Quick Navigation</h2>
+        <div class="link-grid">
+            <route-link to="/about" class="card-link">
+                <div class="card">
+                    <h3>About Page</h3>
+                    <p>Learn more about this router</p>
+                </div>
+            </route-link>
+            
+            <route-link to="/user/123" class="card-link">
+                <div class="card">
+                    <h3>User Profile</h3>
+                    <p>View user profile with dynamic ID</p>
+                </div>
+            </route-link>
+            
+            <route-link to="/products/electronics" class="card-link">
+                <div class="card">
+                    <h3>Electronics</h3>
+                    <p>Browse electronics category</p>
+                </div>
+            </route-link>
+            
+            <route-link to="/products/books/456?sort=price" class="card-link">
+                <div class="card">
+                    <h3>Book Details</h3>
+                    <p>View specific book with query params</p>
+                </div>
+            </route-link>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="about-page">
+    <h1>About JS Router</h1>
+    
+    <div class="content">
+        <section>
+            <h2>What is JS Router?</h2>
+            <p>JS Router is a modern, lightweight JavaScript SPA (Single Page Application) router inspired by Vue Router. It provides a declarative way to handle client-side routing with support for dynamic parameters, nested routes, and programmatic navigation.</p>
+        </section>
+        
+        <section>
+            <h2>Key Features</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>🎯 Dynamic Route Matching</h3>
+                    <p>Support for dynamic segments like <code>/user/:id</code> and optional parameters like <code>/posts/:id?</code></p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>🧩 Web Components</h3>
+                    <p>Built-in <code>&lt;route-view&gt;</code> and <code>&lt;route-link&gt;</code> components for declarative routing</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>⚡ Programmatic Navigation</h3>
+                    <p>Navigate programmatically with <code>router.push()</code>, <code>router.replace()</code>, and history methods</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>🎨 Active Link Styling</h3>
+                    <p>Automatic active class management for navigation links</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>📄 Flexible Content Loading</h3>
+                    <p>Support for HTML templates, component functions, and inline HTML content</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>🔍 Query Parameters</h3>
+                    <p>Full support for query string parameters and hash fragments</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Usage Example</h2>
+            <pre><code>import { createRouter, defineRoutes } from '@js-router/lib'
+
+const routes = defineRoutes([
+    {
+        path: '/',
+        component: () => '&lt;h1&gt;Home&lt;/h1&gt;'
+    },
+    {
+        path: '/user/:id',
+        template: '/templates/user.html'
+    }
+])
+
+const router = createRouter({ routes })
+</code></pre>
+        </section>
+        
+        <div class="navigation">
+            <route-link to="/" class="btn btn-primary">← Back to Home</route-link>
+            <route-link to="/user/demo" class="btn btn-secondary">Try User Route →</route-link>
+        </div>
+    </div>
+</div>
